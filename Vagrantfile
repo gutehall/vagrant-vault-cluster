@@ -41,7 +41,7 @@ SCRIPT
 Vagrant.configure("2") do |config|
   config.vm.provision "shell", inline: $script
 
-  config.vm.box = "ubuntu/xenial64"
+  config.vm.box = "ubuntu/jammy64"
   #config.vm.box = "bento/ubuntu-22.04-arm64"
   #config.vm.box_check_update = false
 
@@ -62,13 +62,13 @@ Vagrant.configure("2") do |config|
   #config.vm.synced_folder "../data", "/vagrant_data"
 
   config.vm.provider "virtualbox" do |vb|
-    vb.memory = 2048
+    vb.memory = 4096
     vb.cpus = 2
     vb.check_guest_additions = false
 end
 
 config.vm.provider "parallels" do |prl|
-    prl.memory = 2048
+    prl.memory = 4096
     prl.cpus = 2
     prl.update_guest_tools = false
 end
