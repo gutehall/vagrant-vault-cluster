@@ -12,17 +12,9 @@ Vagrant.configure("2") do |config|
   config.vm.network "forwarded_port", guest: 2183, host: 2183
   config.vm.network "forwarded_port", guest: 3000, host: 3000
   config.vm.network "forwarded_port", guest: 80, host: 8080, host_ip: "127.0.0.1"
-  #config.vm.network "private_network", ip: "192.168.33.10"
-
   config.vm.network "public_network"
 
   #config.vm.synced_folder "../data", "/vagrant_data"
-
-  # config.vm.provider "virtualbox" do |vb|
-  #   vb.memory = 4096
-  #   vb.cpus = 2
-  #   vb.check_guest_additions = false
-  # end
 
   config.vm.provider "parallels" do |prl|
     prl.memory = 4096
