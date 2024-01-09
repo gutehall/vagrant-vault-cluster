@@ -1,6 +1,6 @@
 Vagrant.configure("2") do |config|
 
-  config.vm.box = "bento/ubuntu-22.04-arm64"
+  config.vm.box = "bento/ubuntu-23.04-arm64"
   #config.vm.box_check_update = false
 
   config.vm.provision "shell", inline: "dpkg-reconfigure --frontend noninteractive tzdata"
