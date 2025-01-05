@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: vagrant-vault-cluster
+  annotations:
+    github.com/project-slug: gutehall/vagrant-vault-cluster
+spec:
+  type: other
+  lifecycle: unknown
+  owner: guests
